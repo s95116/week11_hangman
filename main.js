@@ -2,7 +2,10 @@ var inquirer = require('inquirer');
 var RandomWordGenerator = require('./game.js');
 var guessRemain = 9;
 
-inquirer.prompt([
+
+//Inquirer function called prompt
+function prompt(){
+  inquirer.prompt([
   {
     type: 'input',
     name: 'guess',
@@ -12,7 +15,13 @@ inquirer.prompt([
   ]).then(function(userGuess){
 
     console.log(userGuess.guess);
+
+    prompt();//Runs function prompt again
   })
+}//end of function prompt
 
+//Calls function prompt
+prompt();
 
-RandomWordGenerator();
+//Test to see if module.export works.. It does!
+//RandomWordGenerator();
