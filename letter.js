@@ -1,0 +1,1 @@
+var RandomWordGenerator = require('./game.js')

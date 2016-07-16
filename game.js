@@ -1,15 +1,15 @@
 var wordBank = ['apples', 'dinosaur', 'whales', 'penguins', 'ikea', 'samsung', 'apricots', 'netflix', 'pokemon', 'fiji', 'snoopy'];
-var randomWord = "";
+var RandomWord = "";
 
 // console.log(wordBank);
 
-function randomWordGenerator(){
+function RandomWordGenerator(){
   randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
   console.log(randomWord);
 
 }
 
-randomWordGenerator();
+// randomWordGenerator();
 
-// module.exports = RandomWord;
+module.exports = RandomWordGenerator;
