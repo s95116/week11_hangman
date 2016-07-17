@@ -20,8 +20,10 @@ function prompt(){
   })
 }//end of function prompt
 
+
 //Calls function prompt
 prompt();
+
 
 //Test to see if module.export works.. It does!
 //RandomWordGenerator();
