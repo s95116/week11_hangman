@@ -1,7 +1,15 @@
+//Global variables
 var inquirer = require('inquirer');
 var RandomWordGenerator = require('./game.js');
 var guessRemain = 9;
+var lettersGuessed = [];
+var RandomWord = [];
 
+
+
+
+// console.log(RandomWordGenerator.RandomWordGenerator.randomWord);
+Randomword = RandomWordGenerator();//Displays the random word for testing
 
 //Inquirer function called prompt
 function prompt(){
@@ -14,9 +22,37 @@ function prompt(){
 
   ]).then(function(userGuess){
 
-    console.log(userGuess.guess);
+    // console.log("userGuess.guess " + userGuess.guess);
+    // for (var i = 0; i <= 9 guessRemain.length; i++) {
+    //   console.log(guessRemain);
+    // }
 
-    prompt();//Runs function prompt again
+  //adds letters used into an array 'lettersGuess', displays which letters have been picked
+  
+  if (lettersGuessed.indexOf(userGuess.guess) == -1){
+    // lettersGuessed.push(userGuess);
+    // console.log()
+    lettersGuessed.push(userGuess.guess);
+    console.log(lettersGuessed);
+  }
+
+console.log("test1");
+// console.log(RandomWord.length);
+  //checks the letter guesses against the random word
+  // for (var index1 = 0; index1 < RandomWord.length; index1++) {
+  //   console.log("test4");
+  //   var i = RandomWord.indexOf(userGuess.guess);
+  //       console.log("test3")  ;
+  //     if(i != -1) {
+  //       displayWord[i] = userGuess.guess;   //found letter from userGuess
+  //       //updateScreen();
+  //       RandomWord[i] = "_";
+  //     }
+
+  // }
+  console.log("test2");
+prompt();//Runs function prompt again
+    
   })
 }//end of function prompt
 
@@ -26,4 +62,4 @@ prompt();
 
 
 //Test to see if module.export works.. It does!
-//RandomWordGenerator();
+RandomWordGenerator();
