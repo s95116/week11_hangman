@@ -1,15 +1,20 @@
 //Global variables
 var inquirer = require('inquirer');
-var RandomWordGenerator = require('./game.js');
+var RandomWord = require('./game.js');
 var guessRemain = 9;
 var lettersGuessed = [];
-var RandomWord = [];
+//var RandomWord = [];
 
 
 
 
 // console.log(RandomWordGenerator.RandomWordGenerator.randomWord);
-Randomword = RandomWordGenerator();//Displays the random word for testing
+//RandomWord = RandomWordGenerator();//Displays the random word for testing
+
+
+var myRandomWord = new RandomWord();
+
+console.log("myRandomWord " + JSON.stringify(myRandomWord));
 
 //Inquirer function called prompt
 function prompt(){
@@ -62,4 +67,4 @@ prompt();
 
 
 //Test to see if module.export works.. It does!
-RandomWordGenerator();
+//RandomWordGenerator();

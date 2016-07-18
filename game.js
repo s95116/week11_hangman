@@ -1,7 +1,7 @@
 //Global variables
 var wordBank = ['apples', 'dinosaur', 'whales', 'penguins', 'ikea', 'samsung', 'apricots', 'netflix', 'pokemon', 'fiji', 'snoopy'];
 // var RandomWord = [];
-var randomWord = [];
+// var randomWord = [];
 var displayWord = [];
 
 //Check to see that the wordBank is working
@@ -9,10 +9,10 @@ var displayWord = [];
 
 
 //Generates the random word
-function RandomWordGenerator(){
+var RandomWord = function RandomWordGenerator(){
   randomWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 
-  console.log(randomWord);
+  //console.log(randomWord);
   //console.log(RandomWord[1]);
   //console.log(RandomWord.length);
 
@@ -22,9 +22,9 @@ function RandomWordGenerator(){
     displayWord[i] = "_";
   }
 
-return RandomWord;
+//return randomWord;
 }
 
 //RandomWordGenerator();
 
-exports = RandomWordGenerator;
+module.exports = RandomWord;
